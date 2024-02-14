@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar integrante | Grupo CES</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <h1>Grupo CES</h1>
+    <h2>Agregar Integrante</h2>
+    <a href="index.html">Volver al inicio</a>
+    <div>
+        <label for="nombre">Nombre del nuevo integrante:</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="cargo">Cargo del integrante:</label>
+        <input type="text" name="cargo" id="cargo">
+        <button>Agregar</button>
+    </div>
+    <div class="tarjetas">
+        <ul>
+
+        </ul>
+    </div>
+
+</main>
+    <script>
+    const list = document.querySelector("ul");
+    const inputNombre = document.getElementById("nombre");
+    const inputCargo = document.getElementById("cargo");
+    const button = document.querySelector("button");
+
+    button.addEventListener( "click" , ()=> {
+        const newName = inputNombre.value;
+        inputNombre.value = "";
+        const newCargo = inputCargo.value;
+        inputCargo.value = "";
+
+        const newItem = document.createElement("li");
+        const itemTextName = document.createElement("h3");
+        const itemTextCargo = document.createElement("p");
+        const itemButton = document.createElement("button");
+
+        newItem.appendChild(itemTextName);
+        itemTextName.textContent = newName;
+        newItem.appendChild(itemTextCargo);
+        itemTextCargo.textContent = newCargo;
+
+        newItem.appendChild(itemButton);
+        itemButton.textContent = "Eliminar";
+
+        list.appendChild(newItem);
+
+        itemButton.addEventListener("click", ()=>{
+            list.removeChild(newItem);
+        });
+
+        inputNombre.focus();
+        inputCargo.focus();
+    });
+    </script>
+</body>
+</html>

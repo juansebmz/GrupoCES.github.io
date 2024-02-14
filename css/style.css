@@ -1,0 +1,41 @@
+h1,h2{
+    display: flex;
+    justify-content: center;
+}
+
+main .tarjetas{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+main .tarjetas ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main .tarjetas ul li {
+    margin: 20px;
+    padding: 0 25px;
+    list-style-type: none;
+    background: rebeccapurple;
+    border-radius: 10px;
+}
+
+main .agregarPersona{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px;
+    list-style-type: none;
+    background: rebeccapurple;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+}
