@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;400;500;600&display=swap');
+
+body{
+    background: rgb(114,194,245);
+    background: linear-gradient(163deg, rgba(114,194,245,1) 0%, rgba(0,90,185,1) 73%, rgba(0,50,163,1) 100%);
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: azure;
+}
+
 h1,h2{
     display: flex;
     justify-content: center;
+
 }
 
 main .tarjetas{
     display: flex;
-    width: 100%;
-    margin: 0 auto;
     justify-content: center;
 }
 main .tarjetas ul{
@@ -17,10 +26,31 @@ main .tarjetas ul{
 
 main .tarjetas ul li {
     margin: 20px;
-    padding: 0 25px;
     list-style-type: none;
-    background: rebeccapurple;
+    background: rgba(8, 98, 189, 0.49);
     border-radius: 10px;
+}
+
+main .tarjetas li{
+    display: inline-flex;
+    padding: 10px 20px;
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+main .tarjetas li:hover{
+    cursor: pointer;
+    background: rgb(6, 63, 128);
+}
+
+main .tarjetas img{
+    width: 100px;
+    height: auto;
+    border-radius: 100px;
+    margin: 10px;
 }
 
 main .agregarPersona{
@@ -29,7 +59,7 @@ main .agregarPersona{
     margin: 30px;
     padding: 10px;
     list-style-type: none;
-    background: rebeccapurple;
+    background: rgb(16, 67, 128);
     border-radius: 10px;
     text-decoration: none;
     color: white;

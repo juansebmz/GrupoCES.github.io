@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Agregar integrante | Grupo CES</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
 <main>
     <h1>Grupo CES</h1>
     <h2>Agregar Integrante</h2>
-    <a href="index.html">Volver al inicio</a>
-    <div>
+    <a class="inicio_btn" href="index.html">Volver al inicio</a>
+    <div class="formulario">
         <label for="nombre">Nombre del nuevo integrante:</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" id="nombre" autocomplete="off">
         <label for="cargo">Cargo del integrante:</label>
         <input type="text" name="cargo" id="cargo">
         <button>Agregar</button>
@@ -37,16 +38,19 @@
         inputCargo.value = "";
 
         const newItem = document.createElement("li");
+        const divInfo = document.createElement("div");
         const itemTextName = document.createElement("h3");
         const itemTextCargo = document.createElement("p");
         const itemButton = document.createElement("button");
 
-        newItem.appendChild(itemTextName);
+        divInfo.className = "info";
+        newItem.appendChild(divInfo);
+        divInfo.appendChild(itemTextName);
         itemTextName.textContent = newName;
-        newItem.appendChild(itemTextCargo);
+        divInfo.appendChild(itemTextCargo);
         itemTextCargo.textContent = newCargo;
 
-        newItem.appendChild(itemButton);
+        divInfo.appendChild(itemButton);
         itemButton.textContent = "Eliminar";
 
         list.appendChild(newItem);
