@@ -20,7 +20,27 @@
     </div>
     <div class="tarjetas">
         <ul>
-
+       <li>
+                <img src="img/user1.jpg" alt="">
+                <div class="info">
+                    <h3>Catalina Lomelin</h3>
+                    <p>Desarrolladora de Software</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/user2.jpg" alt="">
+                <div class="info">
+                    <h3>Esteban Azcarate</h3>
+                    <p>Desarrollador de Software</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/user3.jpg" alt="">
+                <div class="info">
+                <h3>Juan Sebastian Muñoz</h3>
+                    <p>Desarrollador de Software</p>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -38,12 +58,15 @@
         inputCargo.value = "";
 
         const newItem = document.createElement("li");
+        const imgUser = document.createElement("img");
         const divInfo = document.createElement("div");
         const itemTextName = document.createElement("h3");
         const itemTextCargo = document.createElement("p");
         const itemButton = document.createElement("button");
 
         divInfo.className = "info";
+        imgUser.src= "/img/user"+Math.floor(Math.random() * (5 - 1 + 1) + 1)+".jpg";
+        newItem.appendChild(imgUser);
         newItem.appendChild(divInfo);
         divInfo.appendChild(itemTextName);
         itemTextName.textContent = newName;
